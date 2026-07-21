@@ -1,0 +1,19 @@
+{
+  "name": "ratelimiter",
+  "version": "0.1.0",
+  "description": "Zero dependency rate liimiter with different algorithms.",
+  "type": "module",
+  "engines": { "node": ">=20"},
+  "exports": {
+    ".": "./src/index.js",
+    "./testing": "./src/testing.js"
+  },
+  "files": ["src"],
+  "scripts": {
+    "test": "node --test",
+    "bench": "node bench/run.js"
+  },
+  "keywords": ["rate-limit", "sliding-window", "fixed-window", "token-bucket"],
+  "author": "",
+  "license": "ISC"
+}
