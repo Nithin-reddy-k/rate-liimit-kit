@@ -24,7 +24,7 @@ export class FixedWindowLimiter {
         if(!Number.isInteger(limit) || limit <= 0) {
             throw new RangeError("limit must be a positive integer");
         }
-        if(!windowMs > 0) {
+        if(windowMs < 0) {
             throw new RangeError("windowMs must be greater than 0");
         }
         this.#limit = limit;
