@@ -1,6 +1,18 @@
 import { systemClock } from "./clock.js";
 
 
+
+// shape of the data returned.
+// {
+//   allowed: true,        // was this request admitted?
+//   limit: 100,           // the configured ceiling(max no of requests) (for headers)
+//   remaining: 42,        // how many more can be admitted right now
+//   resetAfterMs: 1250,   // ms until the limiter's state fully relaxes
+//   retryAfterMs: 800,    // only when a req denied: ms until a retry could succeed
+// }
+
+
+
 export class FixedWindowLimiter {
     #limit;
     #windowMs;
